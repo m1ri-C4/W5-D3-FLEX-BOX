@@ -20,9 +20,9 @@ html {
 
 
 /* Body: tipografia di base */
-body {
+body, html {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   color: #2b2b2b;
   background-color: #fafafa;
@@ -77,13 +77,10 @@ body {
 /* Nav */
 #site-header nav ul {
   list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
-  text-align: center;
-}
-
-#site-header nav li {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
 }
 
 #site-header nav a {
@@ -154,6 +151,12 @@ h3 {
   margin: 0 auto;
 }
 
+.bio{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -172,29 +175,41 @@ img {
 
 /* Lista competenze a righe alternate */
 .skill-list {
-  line-height: 2.2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
 }
 
-.skill-list li:nth-child(odd) {
-  background-color: #f5f7fb;
-}
-
-.skill-list li:nth-child(even) {
-  background-color: #ffffff;
+.skill-list li{
+  background-color: hsl(220, 60%, 30%);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
 }
 
 .skill-list li:first-child {
   font-weight: bold;
+  background-color: hsl(45, 90%, 60%);
+  color: black;
 }
 
 
 /* Progetti alternati + tag NEW sul primo */
 
+.project-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .project {
   position: relative;
+  flex: 1 1 260px;
   padding: 16px;
+  border: 1px solid #e0e0e0;
   border-radius: 6px;
-  margin-bottom: 16px;
 }
 
 .project:nth-of-type(odd) {
@@ -298,7 +313,7 @@ textarea::placeholder {
   font-style: italic;
 }
 
-button {
+#apri-contatti, #invia-contatti, .close {
   color: #ffffff;
   background-color: hsl(220, 60%, 30%);
   font-weight: bold;
@@ -310,18 +325,23 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.close{
+#apri-contatti{
+  width: 30%;
+}
+
+.close {
   position: absolute;
   top: 10px;
   right: 10px;
+  width: 30%;
   background-color: transparent;
-  color:#000000;
+  color: #000000;
   border: none;
   font-size: 24px;
   cursor: pointer;
 }
 
-button:hover {
+#apri-contatti:hover, #invia-contatti:hover, .close:hover {
   color: hsl(45, 90%, 80%);
   background-color: hsl(220, 60%, 45%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -338,7 +358,7 @@ button:hover {
   padding: 30px 20px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
   #site-header {
     padding: 60px 20px 40px;
     line-height: 2.4;
@@ -357,25 +377,18 @@ button:hover {
     margin-bottom: 24px;
   }
 
-  .avatar {
-    float: left;
-    margin-right: 16px;
+  .bio {
+   flex-direction: row;
+   align-items: flex-start;
+  }
+
+  .avatar{
+    margin: 0;
+    flex-shrink: 0;
   }
 
   #chi-sono p:first-of-type {
     font-size: 1.15rem;
-  }
-
-  #chi-sono p:first-of-type::first-letter {
-    font-size: 3rem;
-    font-weight: bold;
-    float: left;
-    margin-right: 6px;
-    color: hsl(220, 60%, 30%);
-  }
-
-  #competenze {
-    clear: both;
   }
 
   input,
@@ -384,7 +397,7 @@ button:hover {
     width: 60%;
   }
 
-  button {
+  .close, #invia-contatti {
     width: 30%;
   }
 }

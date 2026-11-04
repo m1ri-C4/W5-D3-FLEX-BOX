@@ -29,11 +29,16 @@
 
     <section id="chi-sono">
       <h2>Chi sono</h2>
-      <img class="avatar" src="https://placehold.co/200x200" alt="Foto profilo di Mario Rossi">
-      <p>Mi chiamo Mario Rossi e sto imparando a programmare. Studio sviluppo web con <strong>Epicode</strong> e ogni
-        giorno aggiungo qualcosa a questa pagina.</p>
-      <p>Vivo a Milano. Ho una formazione precedente in <em>lettere</em> e ora sto cambiando settore. Cerco un primo
-        ruolo come sviluppatore frontend.</p>
+      <div class="bio">
+        <img class="avatar" src="https://placehold.co/200x200" alt="Foto profilo di Mario Rossi">
+        <div class="text">
+          <p>Mi chiamo Mario Rossi e sto imparando a programmare. Studio sviluppo web con <strong>Epicode</strong> e
+            ogni
+            giorno aggiungo qualcosa a questa pagina.</p>
+          <p>Vivo a Milano. Ho una formazione precedente in <em>lettere</em> e ora sto cambiando settore. Cerco un primo
+            ruolo come sviluppatore frontend.</p>
+        </div>
+      </div>
     </section>
 
     <section id="competenze">
@@ -85,18 +90,21 @@
       <h2>Progetti</h2>
       <p>I lavori fatti durante le prime settimane di corso.</p>
 
-      <article class="project">
-        <h3>Pagina ricetta</h3>
-        <p>Una pagina con titolo, ingredienti e procedura. Esercizio di markup semantico applicato a un contenuto reale.
-        </p>
-        <p><a href="https://github.com/mariorossi/ricetta" target="_blank">Vedi su GitHub</a></p>
-      </article>
+      <div class="project-grid">
+        <article class="project">
+          <h3>Pagina ricetta</h3>
+          <p>Una pagina con titolo, ingredienti e procedura. Esercizio di markup semantico applicato a un contenuto
+            reale.
+          </p>
+          <p><a href="https://github.com/mariorossi/ricetta" target="_blank">Vedi su GitHub</a></p>
+        </article>
 
-      <article class="project">
-        <h3>Card di presentazione</h3>
-        <p>Un biglietto digitale con nome, ruolo e link ai social.</p>
-        <p><a href="https://github.com/mariorossi/card" target="_blank">Vedi su GitHub</a></p>
-      </article>
+        <article class="project">
+          <h3>Card di presentazione</h3>
+          <p>Un biglietto digitale con nome, ruolo e link ai social.</p>
+          <p><a href="https://github.com/mariorossi/card" target="_blank">Vedi su GitHub</a></p>
+        </article>
+      </div>
     </section>
 
     <section id="contatti">
@@ -152,7 +160,7 @@
         </p>
 
         <p>
-          <button type="submit">Invia</button>
+          <button id="invia-contatti" type="submit">Invia</button>
         </p>
 
       </form>
