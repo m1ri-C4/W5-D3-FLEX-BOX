@@ -282,6 +282,7 @@ label {
 }
 
 input,
+#data,
 #motivo,
 textarea {
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -298,6 +299,7 @@ textarea {
 }
 
 input:focus,
+#data:focus,
 #motivo:focus,
 textarea:focus {
   background-color: #ffffff;
