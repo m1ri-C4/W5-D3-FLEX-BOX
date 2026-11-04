@@ -399,11 +399,13 @@ textarea::placeholder {
     width: 60%;
   }
 
-  .modal {
-    width: 50%;
-  }
-
   .close, #invia-contatti {
     width: 30%;
+  }
+}
+
+@media (min-width: 1200px){
+  .modal {
+    width: 35%;
   }
 }
