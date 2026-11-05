@@ -329,7 +329,7 @@ img {
   color: #ffffff;
   border-radius: 3px;
   font-size: 0.75rem;
-  animation: pulse-badge 2s cubic-bezier(0.68, -0.55, 0.27, 1.55)  infinite;
+  animation: pulse-badge 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
   transform-origin: top right;
 }
 
@@ -397,8 +397,7 @@ img {
   animation: overlay-in 0.3s ease-out;
 }
 
-.overlay:not([hidden]),
-.modal {
+.overlay:not([hidden]) .modal {
   animation: modal-in 0.3s ease-out;
 }
 
