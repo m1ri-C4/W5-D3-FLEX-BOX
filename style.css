@@ -532,6 +532,7 @@ textarea::placeholder {
 
   input,
   #motivo,
+  #data,
   textarea {
     width: 60%;
   }
